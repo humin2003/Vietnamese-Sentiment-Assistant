@@ -73,7 +73,11 @@ streamlit run app.py
 
 ## 📁 Cấu trúc dự án
 
-VietnameseSentimentAssistant/ ├── app.py # Mã nguồn chính (Giao diện + Logic AI + DB) ├── requirements.txt # Danh sách thư viện cần cài đặt ├── README.md # Tài liệu hướng dẫn sử dụng └── sentiment_history.db # Database SQLite (Tự động tạo khi chạy app)
+* **VietnameseSentimentAssistant/**
+    * `app.py`: Mã nguồn chính (Giao diện + Logic AI + DB)
+    * `requirements.txt`: Danh sách thư viện cần cài đặt
+    * `README.md`: Tài liệu hướng dẫn sử dụng
+    * `sentiment_history.db`: Database SQLite (Tự động tạo khi chạy app)
 
 
 🧪 Kết quả thử nghiệm (Test Cases)
