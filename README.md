@@ -98,8 +98,8 @@ Hệ thống đã được kiểm thử với các trường hợp sau:
 | 8 | Ngày mai đi học | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
 | 9 | Cảm ơn bạn rất nhiều | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
 | 10 | Mệt mỏi quá hôm nay | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
-| 11 | Tui thấy bt | Tôi thấy bình thường | NEUTRAL | NEUTRAL | Đúng |
-| 12 | Tui thấy hok vui | Tôi thấy không vui | NEGATIVE | NEGATIVE | Đúng |
+| 11 | Tui thấy bt | Tôi thấy bình thường | NEUTRAL | NEUTRAL | Đúng (Nhờ Dict) |
+| 12 | Tui thấy hok vui | Tôi thấy không vui | NEGATIVE | NEGATIVE | Đúng (Nhờ Dict) |
 
 🐛 Khắc phục sự cố (Troubleshooting)
 
