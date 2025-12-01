@@ -1,8 +1,10 @@
-🤖 Trợ Lý Phân Loại Cảm Xúc Tiếng Việt (Vietnamese Sentiment Analysis)
+Trợ Lý Phân Loại Cảm Xúc Tiếng Việt (Vietnamese Sentiment Analysis)
 
 Môn học: Seminar Chuyên đề
 
 Sinh viên thực hiện: Trần Hữu Minh
+
+MSSV: 3121410323
 
 Thời gian: 11/2025
 
@@ -71,7 +73,7 @@ streamlit run app.py
 
 📂 Cấu trúc dự án
 
-📁 Sentiment-Analysis-Project/
+📁 VietnameseSentimentAssistant/
 ├── 📄 app.py                 # Mã nguồn chính (Giao diện + Logic AI + DB)
 ├── 📄 requirements.txt       # Danh sách thư viện cần cài đặt
 ├── 📄 README.md              # Tài liệu hướng dẫn sử dụng
@@ -83,6 +85,7 @@ streamlit run app.py
 Hệ thống đã được kiểm thử với các trường hợp khó:
 
 Đầu vào (Input)                      Xử lý Tiền xử lý          Kết quả Model         Kết quả hiển thị
+
 "Hôm nay tôi rất vui"                 -> Giữ nguyên              POS (99%)               TÍCH CỰC
 
 "Món ăn này dở tệ"                    -> Giữ nguyên              NEG (98%)               TIÊU CỰC
@@ -102,3 +105,6 @@ Lỗi xung đột NumPy 2.x: Đã cố định version numpy<2.0.
 Lỗi Model không hiểu Tiếng Việt không dấu: Đã xây dựng hàm preprocess_text với từ điển teencode_dict để dịch sang tiếng Việt chuẩn trước khi đưa vào AI.
 
 Lỗi hiển thị sai màu: Đã chuẩn hóa nhãn đầu ra của Model (POS/NEG/NEU) về định dạng thống nhất Tiếng Việt.
+
+
+
