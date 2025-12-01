@@ -81,20 +81,20 @@ streamlit run app.py
 
 ### 🧪 Kết quả thử nghiệm (Test Cases)
 
-| STT | Đầu vào (Input) | Tiền xử lý | Model Output | Kết quả hiển thị | Đánh giá |
-| :---: | :--- | :---: | :---: | :---: | :---: |
-| 1 | Hôm nay tôi rất vui | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
-| 2 | Món ăn này dở quá | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
-| 3 | Thời tiết bình thường | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
-| 4 | Rat vui hom nay | Rất vui hôm nay | POSITIVE | POSITIVE | Đúng (Nhờ Dict) |
-| 5 | Công việc ổn định | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
-| 6 | Phim này hay lắm | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
-| 7 | Tôi buồn vì thất bại | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
-| 8 | Ngày mai đi học | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
-| 9 | Cảm ơn bạn rất nhiều | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
-| 10 | Mệt mỏi quá hôm nay | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
-| 11 | Tui thấy bt | Tôi thấy bình thường | NEUTRAL | NEUTRAL | Đúng (Nhờ Dict) |
-| 12 | Tui thấy hok vui | Tôi thấy không vui | NEGATIVE | NEGATIVE | Đúng (Nhờ Dict) |
+| STT | Đầu vào (Input) | Tiền xử lý | Model Output | Kết quả hiển thị | Đánh giá | Độ chính xác |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
+| 1 | Hôm nay tôi rất vui | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng | 98.69% |
+| 2 | Món ăn này dở quá | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng | 98.72% |
+| 3 | Thời tiết bình thường | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng | 87.20% | 
+| 4 | Rat vui hom nay | Rất vui hôm nay | POSITIVE | POSITIVE | Đúng (Nhờ Dict) | 99.16% |
+| 5 | Công việc ổn định | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng | 54.95% |
+| 6 | Phim này hay lắm | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng | 94.02% |
+| 7 | Tôi buồn vì thất bại | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng | 98.30% |
+| 8 | Ngày mai đi học | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng | 76.41% |
+| 9 | Cảm ơn bạn rất nhiều | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng | 99.20% |
+| 10 | Mệt mỏi quá hôm nay | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng | 88.70% |
+| 11 | Tui thấy bt | Tôi thấy bình thường | NEUTRAL | NEUTRAL | Đúng (Nhờ Dict) | 90.96% |
+| 12 | Tui thấy hok vui | Tôi thấy không vui | NEGATIVE | NEGATIVE | Đúng (Nhờ Dict) | 98.68% |
 
 ### 🐛 Khắc phục sự cố (Troubleshooting)
 
