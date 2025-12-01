@@ -84,17 +84,13 @@ streamlit run app.py
 
 Hệ thống đã được kiểm thử với các trường hợp khó:
 
-Đầu vào (Input)                      Xử lý Tiền xử lý          Kết quả Model         Kết quả hiển thị
-
-"Hôm nay tôi rất vui"                 -> Giữ nguyên              POS (99%)               TÍCH CỰC
-
-"Món ăn này dở tệ"                    -> Giữ nguyên              NEG (98%)               TIÊU CỰC
-
-"hom nay toi bun qua"            -> "hôm nay tôi buồn quá"       NEG (96%)               TIÊU CỰC
-
-"thời tiết bình thường"               -> Giữ nguyên              NEU (90%)              TRUNG TÍNH
-
-"cũng tạm được"                       -> Giữ nguyên              POS (55%)         TRUNG TÍNH (Do < 60%)
+| Đầu vào (Input) | Xử lý tiền xử lý | Kết quả Model | Kết quả hiển thị |
+| :--- | :---: | :---: | :--- |
+| "Hôm nay tôi rất vui" | Giữ nguyên | POS (99%) | TÍCH CỰC |
+| "Món ăn này dở tệ" | Giữ nguyên | NEG (98%) | TIÊU CỰC |
+| "hom nay toi bun qua" | "hôm nay tôi buồn quá" | NEG (96%) | TIÊU CỰC |
+| "thời tiết bình thường" | Giữ nguyên | NEU (90%) | TRUNG TÍNH |
+| "cũng tạm được" | Giữ nguyên | POS (55%) | TRUNG TÍNH (Do < 60%) |
 
 🐛 Khắc phục sự cố (Troubleshooting)
 
