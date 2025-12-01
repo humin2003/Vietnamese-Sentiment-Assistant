@@ -16,7 +16,7 @@ Dự án xây dựng một ứng dụng web (Web App) đơn giản sử dụng m
 
 🔴 TIÊU CỰC (Negative)
 
-⚪ TRUNG TÍNH (Neutral)
+🔵 TRUNG TÍNH (Neutral)
 
 Ứng dụng được tối ưu hóa để hiểu cả những câu viết tắt, không dấu (teencode) và có cơ chế lưu trữ lịch sử phân tích.
 
