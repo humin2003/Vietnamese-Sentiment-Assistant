@@ -71,8 +71,6 @@ streamlit run app.py
 
 Ứng dụng sẽ tự động mở trên trình duyệt tại địa chỉ: http://localhost:8501
 
-📂 Cấu trúc dự án
-
 ## 📁 Cấu trúc dự án
 
 VietnameseSentimentAssistant/ ├── app.py # Mã nguồn chính (Giao diện + Logic AI + DB) ├── requirements.txt # Danh sách thư viện cần cài đặt ├── README.md # Tài liệu hướng dẫn sử dụng └── sentiment_history.db # Database SQLite (Tự động tạo khi chạy app)
