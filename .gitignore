@@ -1,0 +1,5 @@
+*.db
+sentiment_history
+
+__pycache__/
+*.pyc
