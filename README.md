@@ -82,15 +82,22 @@ streamlit run app.py
 
 🧪 Kết quả thử nghiệm (Test Cases)
 
-Hệ thống đã được kiểm thử với các trường hợp khó:
+Hệ thống đã được kiểm thử với các trường hợp sau:
 
-| Đầu vào (Input) | Xử lý tiền xử lý | Kết quả Model | Kết quả hiển thị |
-| :--- | :---: | :---: | :--- |
-| "Hôm nay tôi rất vui" | Giữ nguyên | POS (99%) | TÍCH CỰC |
-| "Món ăn này dở tệ" | Giữ nguyên | NEG (98%) | TIÊU CỰC |
-| "hom nay toi bun qua" | "hôm nay tôi buồn quá" | NEG (96%) | TIÊU CỰC |
-| "thời tiết bình thường" | Giữ nguyên | NEU (90%) | TRUNG TÍNH |
-| "cũng tạm được" | Giữ nguyên | POS (55%) | TRUNG TÍNH (Do < 60%) |
+## 🧪 Kết quả thử nghiệm (Test Cases)
+
+| STT | Đầu vào (Input) | Tiền xử lý | Model Output | Kết quả hiển thị | Đánh giá |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 1 | Hôm nay tôi rất vui | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
+| 2 | Món ăn này dở quá | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
+| 3 | Thời tiết bình thường | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
+| 4 | Rat vui hom nay | Rất vui hôm nay | POSITIVE | POSITIVE | Đúng (Nhờ Dict) |
+| 5 | Công việc ổn định | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
+| 6 | Phim này hay lắm | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
+| 7 | Tôi buồn vì thất bại | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
+| 8 | Ngày mai đi học | (Giữ nguyên) | NEUTRAL | NEUTRAL | Đúng |
+| 9 | Cảm ơn bạn rất nhiều | (Giữ nguyên) | POSITIVE | POSITIVE | Đúng |
+| 10 | Mệt mỏi quá hôm nay | (Giữ nguyên) | NEGATIVE | NEGATIVE | Đúng |
 
 🐛 Khắc phục sự cố (Troubleshooting)
 
