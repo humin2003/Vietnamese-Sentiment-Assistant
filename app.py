@@ -12,7 +12,6 @@ st.set_page_config(
 )
 
 # --- TÙY CHỈNH GIAO DIỆN (CSS) ---
-# Đã xóa đoạn h1, h2, h3 color: white để nó tự đổi màu theo theme
 st.markdown("""
     <style>
     /* Chỉ chỉnh style cho nút bấm cho đẹp hơn, không can thiệp màu chữ tiêu đề */
