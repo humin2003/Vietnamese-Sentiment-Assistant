@@ -8,7 +8,7 @@ MSSV: 3121410323
 
 Thời gian: 11/2025
 
-### 📖 Giới thiệu (Introduction)
+### Giới thiệu (Introduction)
 
 Dự án xây dựng một ứng dụng web (Web App) đơn giản sử dụng mô hình Transformer (PhoBERT) để phân tích cảm xúc của các câu văn tiếng Việt. Ứng dụng có khả năng nhận diện 3 trạng thái cảm xúc:
 
@@ -20,7 +20,7 @@ Dự án xây dựng một ứng dụng web (Web App) đơn giản sử dụng m
 
 Ứng dụng được tối ưu hóa để hiểu cả những câu viết tắt, không dấu (teencode) và có cơ chế lưu trữ lịch sử phân tích.
 
-### 🚀 Tính năng nổi bật (Key Features)
+### Tính năng nổi bật (Key Features)
 
 Mô hình AI mạnh mẽ: Sử dụng wonrax/phobert-base-vietnamese-sentiment (dựa trên PhoBERT) đạt độ chính xác cao cho tiếng Việt.
 
@@ -34,7 +34,7 @@ Giao diện thân thiện: Xây dựng bằng Streamlit, trực quan, dễ sử 
 
 Lưu trữ cục bộ: Tích hợp SQLite để lưu lại toàn bộ lịch sử các câu đã phân tích (Text, Label, Score, Timestamp).
 
-### 🛠️ Công nghệ sử dụng (Tech Stack)
+### Công nghệ sử dụng (Tech Stack)
 
 Ngôn ngữ: Python 3.10+
 
@@ -46,7 +46,7 @@ Database: SQLite3 (Built-in)
 
 Xử lý dữ liệu: Pandas
 
-### ⚙️ Hướng dẫn cài đặt (Installation)
+### Hướng dẫn cài đặt (Installation)
 
 Do sự xung đột giữa phiên bản NumPy 2.0 mới và các thư viện Deep Learning cũ, vui lòng tuân thủ các bước cài đặt sau để đảm bảo ứng dụng chạy ổn định.
 
@@ -71,7 +71,7 @@ streamlit run app.py
 
 Ứng dụng sẽ tự động mở trên trình duyệt tại địa chỉ: http://localhost:8501
 
-### 📁 Cấu trúc dự án
+### Cấu trúc dự án
 
 * **VietnameseSentimentAssistant/**
     * `app.py`: Mã nguồn chính (Giao diện + Logic AI + DB)
@@ -79,7 +79,7 @@ streamlit run app.py
     * `README.md`: Tài liệu hướng dẫn sử dụng
     * `sentiment_history.db`: Database SQLite (Tự động tạo khi chạy app)
 
-### 🧪 Kết quả thử nghiệm (Test Cases)
+### Kết quả thử nghiệm (Test Cases)
 
 | STT | Đầu vào (Input) | Tiền xử lý | Model Output | Kết quả hiển thị | Đánh giá | Độ chính xác |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -96,7 +96,7 @@ streamlit run app.py
 | 11 | Tui thấy bt | Tôi thấy bình thường | NEUTRAL | NEUTRAL | Đúng (Nhờ Dict) | 90.96% |
 | 12 | Tui thấy hok vui | Tôi thấy không vui | NEGATIVE | NEGATIVE | Đúng (Nhờ Dict) | 98.68% |
 
-### 🐛 Khắc phục sự cố (Troubleshooting)
+### Khắc phục sự cố (Troubleshooting)
 
 Trong quá trình phát triển, nhóm đã xử lý các vấn đề sau:
 
