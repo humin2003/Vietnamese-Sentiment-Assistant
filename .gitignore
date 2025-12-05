@@ -1,4 +1,3 @@
-*.db
 sentiment_history
 
 __pycache__/
