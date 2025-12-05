@@ -4,7 +4,7 @@ import sqlite3
 import datetime
 import pandas as pd
 
-# --- CẤU HÌNH TRANG ---
+# --- CẤU HÌNH TRANG (Bắt buộc phải để đầu tiên) ---
 st.set_page_config(
     page_title="Đồ án: Trợ lý Cảm xúc",
     layout="wide",
@@ -12,24 +12,27 @@ st.set_page_config(
 )
 
 # --- TÙY CHỈNH GIAO DIỆN (CSS) ---
+# Đã xóa đoạn h1, h2, h3 color: white để nó tự đổi màu theo theme
 st.markdown("""
     <style>
-    h1, h2, h3 {
-        color: white !important;
-    }
+    /* Chỉ chỉnh style cho nút bấm cho đẹp hơn, không can thiệp màu chữ tiêu đề */
     .stButton>button {
         background-color: #0056b3;
         color: white;
         border-radius: 10px;
         height: 3em;
-        width: 100%;
+        /* Xóa width: 100% ở đây, dùng tham số use_container_width=True trong python sẽ chuẩn hơn */
+    }
+    .stButton>button:hover {
+        background-color: #004494; /* Thêm hiệu ứng hover cho xịn */
+        color: white;
+        border-color: #004494;
     }
     </style>
     """, unsafe_allow_html=True)
 
 # --- 1. SIDEBAR (THÔNG TIN SINH VIÊN) ---
 with st.sidebar:
-    
     st.title("SEMINAR CHUYÊN ĐỀ")
     st.info("ĐỀ TÀI: XÂY DỰNG TRỢ LÝ PHÂN LOẠI CẢM XÚC TIẾNG VIỆT SỬ DỤNG TRANSFORMER")
     
@@ -42,14 +45,19 @@ with st.sidebar:
 # --- 2. LOAD MODEL ---
 @st.cache_resource
 def load_sentiment_pipeline():
-    model_name = "wonrax/phobert-base-vietnamese-sentiment"
-    nlp = pipeline("sentiment-analysis", model=model_name, tokenizer=model_name)
-    return nlp
+    # Thêm try-catch ngay lúc load để tránh crash app nếu mạng yếu
+    try:
+        model_name = "wonrax/phobert-base-vietnamese-sentiment"
+        nlp = pipeline("sentiment-analysis", model=model_name, tokenizer=model_name)
+        return nlp
+    except Exception as e:
+        return None
 
-try:
-    classifier = load_sentiment_pipeline()
-except Exception as e:
-    st.error(f"Lỗi tải model: {e}")
+classifier = load_sentiment_pipeline()
+
+if classifier is None:
+    st.error("Lỗi: Không thể tải model. Vui lòng kiểm tra kết nối internet.")
+    st.stop() # Dừng app nếu không có model
 
 # --- 3. DATABASE ---
 def init_db():
@@ -118,7 +126,8 @@ col_input, col_result = st.columns([2, 1])
 
 with col_input:
     user_input = st.text_area("Nhập câu tiếng Việt cần phân tích:", height=150, placeholder="Ví dụ: Hôm nay tôi rất vui")
-    analyze_btn = st.button("Thực hiện Phân tích")
+    # Sử dụng use_container_width=True thay vì CSS width: 100%
+    analyze_btn = st.button("Thực hiện Phân tích", use_container_width=True)
 
 # Biến để lưu kết quả hiển thị
 result_container = col_result.empty()
@@ -166,8 +175,10 @@ st.divider()
 
 # --- 6. LỊCH SỬ (DƯỚI CÙNG) ---
 st.subheader("Nhật ký phân tích")
-if st.button("Cập nhật danh sách"):
-    st.rerun()
+col_his_1, col_his_2 = st.columns([4,1])
+with col_his_2:
+    if st.button("Làm mới", use_container_width=True):
+        st.rerun()
 
 df_history = get_history()
 if not df_history.empty:
